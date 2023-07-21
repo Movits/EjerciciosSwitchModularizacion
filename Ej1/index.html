@@ -9,9 +9,9 @@
 <body>
     
     <fieldset id="fieldset1">
-        <img src="https://www.recetasderechupete.com/wp-content/uploads/2018/01/Pan-casero-fácil.jpg" alt="">
-        <p>Pan</p>
-        <p>Precio: 500$</p>
+        <img id="img-producto" src="https://www.recetasderechupete.com/wp-content/uploads/2018/01/Pan-casero-fácil.jpg" alt="">
+        <p id="tipo-producto">Pan</p>
+        <p id="precio-producto">Precio: 500$</p>
         <fieldset>
             <legend>Cantidad:</legend>
             <select name="cantidad" id="">
@@ -23,7 +23,7 @@
     </fieldset>
 
     <button id="boton-agregar" onclick="agregarProducto()">Agregar</button>
-    <button>Siguiente</button>
+    <button onclick="siguienteProducto()">Siguiente</button>
     <p id="precioTotal">Total: $0</p>
 
     <fieldset>
