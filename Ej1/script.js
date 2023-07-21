@@ -9,6 +9,6 @@ function agregarProducto() {
     precioTotal = (PRECIO_PROD_1 * selectCant.value) + precioTotal;
     pPrecioTotal.innerHTML = "Total: $" + precioTotal;
     olListaCarrito.innerHTML += `
-    <li>${selectCant.value} Pan/es</li>
+    <li>Pan (${selectCant.value}) </li>
     `;
 }

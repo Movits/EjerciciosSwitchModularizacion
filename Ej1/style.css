@@ -6,8 +6,19 @@ body{
     font-size: larger;
     display: grid;
     place-content: center;
+    color: white;
+    background-color: rgb(105, 105, 255);
 }
 
-div{
+#fieldset1{
     background-color: rgb(172, 202, 232);
+}
+
+button{
+    color: green;
+    font-size: large;
+}
+
+fieldset{
+    border: 2px solid white;
 }
