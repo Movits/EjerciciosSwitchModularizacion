@@ -11,11 +11,14 @@ let tipoProducto = document.querySelector("#tipo-producto");
 let precioProducto = document.querySelector("#precio-producto");
 let imgProducto = document.querySelector("#img-producto");
 
+let nombreProductoActual = PROD_1;
+let precioProductoActual = PRECIO_PROD_1;
+
 function agregarProducto() {
-    precioTotal = (PRECIO_PROD_1 * selectCant.value) + precioTotal;
+    precioTotal = (precioProductoActual * selectCant.value) + precioTotal;
     pPrecioTotal.innerHTML = "Total: $" + precioTotal;
     olListaCarrito.innerHTML += `
-    <li>${PROD_1} (${selectCant.value}) </li>
+    <li>${nombreProductoActual} (${selectCant.value}) </li>
     `;
 }
 
@@ -26,9 +29,6 @@ function siguienteProducto() {
     precioProducto.innerHTML = "Precio: " + PRECIO_PROD_2;
     imgProducto.src = "https://www.abc.com.py/resizer/XRvOD1fw0nVKkmGJY6JbE21yZkE=/fit-in/770x495/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/abccolor/PVBO4DFYMZH2NHZTQPE7H3P7HE.jpg";
 
-    precioTotal = (PRECIO_PROD_2 * selectCant.value) + precioTotal;
-    pPrecioTotal.innerHTML = "Total: $" + precioTotal;
-    olListaCarrito.innerHTML += `
-    <li>${PROD_2} (${selectCant.value}) </li>
-    `;
+    nombreProductoActual = PROD_2;
+    precioProductoActual = PRECIO_PROD_2;
 }
