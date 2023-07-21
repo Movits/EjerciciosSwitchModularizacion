@@ -9,22 +9,22 @@
 <body>
     
     <div>
-        <img width="200px" src="https://www.recetasderechupete.com/wp-content/uploads/2018/01/Pan-casero-fácil.jpg" alt="">
+        <img src="https://www.recetasderechupete.com/wp-content/uploads/2018/01/Pan-casero-fácil.jpg" alt="">
         <p>Pan</p>
         <p>Precio: 500$</p>
         <fieldset>
             <legend>Cantidad:</legend>
             <select name="cantidad" id="">
-                <option value="opcion1">1</option>
-                <option value="opcion2">3</option>
-                <option value="opcion3">7</option>
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
             </select>
         </fieldset>
-        <button>agregar</button>
     </div>
 
+    <button onclick="agregarProducto()">Agregar</button>
     <button>Siguiente</button>
-    <p>Total: $0</p>
+    <p id="precioTotal">Total: $0</p>
 
     <fieldset>
         <legend>Carrito:</legend>

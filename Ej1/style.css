@@ -1,0 +1,13 @@
+img{
+    width: 30vh;
+}
+
+body{
+    font-size: larger;
+    display: grid;
+    place-content: center;
+}
+
+div{
+    background-color: rgb(172, 202, 232);
+}
