@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio Tienda</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <div>
+        <img width="200px" src="https://www.recetasderechupete.com/wp-content/uploads/2018/01/Pan-casero-fácil.jpg" alt="">
+        <p>Pan</p>
+        <p>Precio: 500$</p>
+        <fieldset>
+            <legend>Cantidad:</legend>
+            <select name="cantidad" id="">
+                <option value="opcion1">1</option>
+                <option value="opcion2">3</option>
+                <option value="opcion3">7</option>
+            </select>
+        </fieldset>
+        <button>agregar</button>
+    </div>
+
+    <button>Siguiente</button>
+    <p>Total: $0</p>
+
+    <fieldset>
+        <legend>Carrito:</legend>
+        <ol id="listaCarrito">
+
+        </ol>
+    </fieldset>
+
     <script src="script.js"></script>
 </body>
 </html>
