@@ -1,0 +1,27 @@
+img{
+    width: 300px;
+}
+
+#fieldset1{
+    border-color:aqua ;
+    text-align: center;
+}
+#fieldset2{
+    border-color: aqua;
+    width: 275px;
+    text-align: left;
+}
+
+body{
+    display: grid;
+    place-content: center;
+}
+
+button{
+    width: 300px;
+}
+
+#pInfo{
+    text-align: center;
+    font-size: larger;
+}
