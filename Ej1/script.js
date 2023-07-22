@@ -16,6 +16,7 @@ let nombreProductoActual = PROD_1;
 let precioProductoActual = PRECIO_PROD_1;
 
 function calcularDescuento(cantidad, producto) {
+    cantidad = Number(cantidad);
     let descuento = 0;
     if (producto === PROD_1) {
         if (cantidad === 3) descuento = 0.10;
@@ -28,15 +29,26 @@ function calcularDescuento(cantidad, producto) {
 }
 
 function calcularRegalo(cantidad, producto) {
+    cantidad = Number(cantidad);
     if (producto === PROD_2 && cantidad === 7) return 1;
-    return 0;
+    else return 0;
 }
 
 function agregarProducto() {
-    precioTotal = (precioProductoActual * selectCant.value) + precioTotal;
+    let cantidad = Number(selectCant.value);
+    let descuento = calcularDescuento(cantidad, nombreProductoActual);
+    let precioDescuento = precioProductoActual * descuento;
+    let totalProducto = (precioProductoActual - precioDescuento) * cantidad;
+
+    precioTotal = totalProducto + precioTotal;
+
+    if (calcularRegalo(cantidad, nombreProductoActual) === 1) {
+        cantidad++;
+    }
+
     pPrecioTotal.innerHTML = "Total: $" + precioTotal;
     olListaCarrito.innerHTML += `
-    <li>${nombreProductoActual} (${selectCant.value}) </li>
+    <li>${nombreProductoActual} (${cantidad}) </li>
     `;
 }
 
