@@ -1,7 +1,9 @@
 const fieldset = document.querySelector("#fieldset1");
 const pInfoSelec = document.querySelector("#pInfo");
 const IMG_2 = "https://media.admagazine.com/photos/63b8643347e50dfe1e2f4997/master/w_3000,h_2000,c_limit/cama-de-hotel-cabecero.jpg";
-const IMG_3 = "https://img.freepik.com/vector-premium/reloj-vector-icono-fondo-blanco-ilustracion-vectorial_736051-174.jpg";
+const IMG_3 = "https://earthsky.org/upl/2014/04/532px-Cranmer_Sundial.jpg";
+const IMG_4 = "https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/comer/cultura-gastronomica/el-desayuno-de-hotel-mas-alla-del-bufe/gr-cms-media-featured_images-none-c58d3bd2-57c8-4094-941e-f29f1599a756-1.jpg";
+const IMG_5 = "https://media.tenor.com/r5a_QxNpB6UAAAAC/gracias-thanks.gif";
 
 let reserva = {
     camas: null,
@@ -71,15 +73,15 @@ function grabarDias() {
     pInfoSelec.innerHTML = pInfoSelec.innerHTML + ", " + reserva.dias + " dia/s";
   }
 
-  function pagIngreso() {
+function pagIngreso() {
     fieldset.innerHTML = `
         <img src="${IMG_3}">
         <fieldset id="fieldset2">
             <p>Dia de Ingreso:</p>
             <select name="" id="diasIngresoOpc">
-                <option value="lunes">Lunes</option>
-                <option value="miercules">Miercules</option>
-                <option value="sabado">Sabado</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Miercules">Miercules</option>
+                <option value="Sabado">Sabado</option>
             </select>
         </fieldset>
         <button onclick="grabarIngreso(); pagServicios();">Seguinte</button>
@@ -89,4 +91,24 @@ function grabarDias() {
 function grabarIngreso() {
     reserva.ingreso = document.querySelector("#diasIngresoOpc").value;
     pInfoSelec.innerHTML = pInfoSelec.innerHTML + ", Ingresa en " + reserva.ingreso;
+  }
+
+function pagServicios() {
+    fieldset.innerHTML = `
+        <img src="${IMG_4}">
+        <fieldset id="fieldset2">
+            <p>Servicios Extra:</p>
+            <select name="" id="serviciosOpc">
+                <option value="Desayuno">Desayuno</option>
+                <option value="Desayuno y almuerzo">Desayuno y almuerzo</option>
+                <option value="Desayuno, almuerzo y cena">Desayuno, almuerzo y cena</option>
+            </select>
+        </fieldset>
+        <button onclick="grabarServicios(); pagGracias();">Seguinte</button>
+    `;
+}
+
+function grabarServicios() {
+    reserva.servicios = document.querySelector("#serviciosOpc").value;
+    pInfoSelec.innerHTML = pInfoSelec.innerHTML + " y " + reserva.servicios + " de servicios.";
   }
