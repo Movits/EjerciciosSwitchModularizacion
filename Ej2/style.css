@@ -6,6 +6,7 @@ img{
 #fieldset1{
     border-color:aqua ;
     text-align: center;
+    width: 300px;
 }
 #fieldset2{
     border-color: aqua;
@@ -24,5 +25,5 @@ button{
 
 #pInfo{
     text-align: center;
-    font-size: larger;
+    font-size: medium;
 }
